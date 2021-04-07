@@ -6,12 +6,16 @@ namespace RandomFibonacci
     {
         public static void Main(string[] args)
         {
-            for (var i = 0; i < 1000; i++)
+            long total = 0;
+            long iterations = 1000000;
+            for (var i = 0; i < iterations; i++)
             {
-                var steps = 100;
+                var steps = 20;
                 long result = RandomFibonacci.Calculate(steps);
-                Console.WriteLine(result);
+                // Console.WriteLine(result);
+                total += result;
             }
+            Console.WriteLine(total / (double)iterations);
         }
     }
 }
